@@ -3,6 +3,7 @@
 
 from utils.view_infos import show_infos
 from utils.reserve_seat import choose_movie
+from utils.manage_res import manage
 
 menus = {
     "0" : "Make Reservation [1] ---- Check Availability [2] ---- Manage Reservation [3] ---- Exit [9]\n",
@@ -14,11 +15,13 @@ menus = {
 
 actions = {
     "1" : choose_movie,
-    "2" : show_infos
+    "2" : show_infos,
+    "3" : manage
 }
 
 def navigate(choice):
     if choice in actions:
         actions[choice]()
+        
     if choice in menus:
         print(menus[choice])
