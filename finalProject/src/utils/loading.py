@@ -1,3 +1,5 @@
+# The following program will start a loading and a starting screen for when the porogram is booted
+
 import time
 
 def loading():
