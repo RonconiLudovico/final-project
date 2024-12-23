@@ -25,3 +25,8 @@ theater = "theater"
 
 seats = "availableSeats"
 
+Id = "Id"
+
+# The following is an empty dict in which the program will store the reservations once made
+
+reservationDict = {}
