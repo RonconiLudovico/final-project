@@ -1,4 +1,5 @@
-# Here I created a function which will return the infos for all the screenings as a Table
+# Here I created a function which starts by importing all the variables converted from
+# the JSON file, then it will return the infos for all the screenings as a Table
 
 from utils.assign_var import *
 
