@@ -25,3 +25,6 @@ Using a function, allow the user to edit reservation information, such as number
 Deleting reservations:
 Using a for loop, display the list of reservations for a specific projection and allow the user to select a reservation to delete.
 Remove the JSON object corresponding to the selected reservation from the reservations array.
+
+
+# All the __init__.py files are used to create packages to be imported into other files in other directories for future test purpose
