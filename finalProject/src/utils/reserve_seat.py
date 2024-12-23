@@ -1,5 +1,10 @@
-from utils.assign_var import *
+# The following program creates a reservation
+# It starts by importing all the needed variables and the randint module from random
 
+from utils.assign_var import *
+from random import randint
+
+# The following fucntion displays the screenings schedule
 def screenings():
     header = "{:<30} {:<30} {:30}".format(Id , title, time)
     program = []
@@ -10,12 +15,24 @@ def screenings():
 
     print(f"{header.upper()}\n\n{"\n\n".join(program)}\n")
 
+# The following function starts by calling first the previous function, then asks the user for the movie to reserve and finally calls the
+# select_seats function with the movie Id as argument
 def choose_movie():
     screenings()
+
     movieChoice = int(input("\nFor which projection would you like to book some seats? [Enter Id]\n"))
+
     print(select_seats(movieChoice))
 
+# The following function starts by asking how many seats would the user like to book, then it updates the number of available seats subtracting the n of seats booked
+# then it passes in the empty dict reservationDict a new element with the reservation infos as value under the form of a tuple, passing a random integer as the key which will
+# represent the reservation id
+# finally it prints out the reservation details
 def select_seats(movieId):
     seatsToBeBooked = input("\nHow many seats would you like to book? ")
+
     movieSchedule[movieId - 1][seats] -= int(seatsToBeBooked)
-    return f"you have booked {seatsToBeBooked} seats for the movie {movieSchedule[movieId - 1][title]}\n"
+
+    reservationDict[randint(00000, 99999)] =[movieId, seatsToBeBooked]
+
+    return f"\nReservation number: {list(reservationDict)[-1]}\n\nyou have booked {seatsToBeBooked} seats for the movie {movieSchedule[movieId - 1][title]}\n"
