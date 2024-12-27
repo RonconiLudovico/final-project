@@ -3,7 +3,7 @@
 
 import json
 
-screeeningInfos = open('/workspaces/TomorrowDevs/finalProject/docs/screening_infos.json')
+screeeningInfos = open('/home/ronco_ubuntu/python_projects/final-project/finalProject/docs/screening_infos.json')
 
 data = json.load(screeeningInfos)
 

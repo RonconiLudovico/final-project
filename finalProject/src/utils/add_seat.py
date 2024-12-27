@@ -4,3 +4,4 @@ from utils.manage_res import *
 
 def add_seat():
     print("there you have a new seat")
+    
