@@ -14,6 +14,7 @@ managing_actions = {
 
 # The program starts here by prompting the user for a reservation number, calling then the reservation
 def manage():
+    global reservationId
     reservationId = int(input("Please insert your reservation number: \n"))
 
     open_reservation(reservationId)
