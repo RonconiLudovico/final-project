@@ -4,6 +4,8 @@ from utils.assign_var import *
 from utils.add_seat import add_seat
 from utils.move_seat import move_seat
 from utils.remove_seat import remove_seat
+from utils.decision_making import *
+
 
 # Here a dictionary is defined in which different functions are called depending on what the user prompted
 managing_actions = {
@@ -14,8 +16,7 @@ managing_actions = {
 
 # The program starts here by prompting the user for a reservation number, calling then the reservation
 def manage():
-    global reservationId
-    reservationId = int(input("Please insert your reservation number: \n"))
+    reservationId = int(input("\n\nPlease insert your reservation number:\n\n"))
 
     open_reservation(reservationId)
 
@@ -23,9 +24,8 @@ def manage():
 # if the reservation number is not found the programm will say so to the user and ask for the reservation number again
 def open_reservation(Id):
     if Id in reservationDict.keys():
-        print(f"Your reserved {reservationDict[Id][1]} seat(s) for the show {movieSchedule[reservationDict[Id][0] - 1][title]}\nwhat would you like to do?\n")
-        choice = input("")
-        navigate_managing(choice)
+        print(f"\nYour reserved {reservationDict[Id][1]} seat(s) for the show {movieSchedule[reservationDict[Id][0] - 1][title]}\n\nwhat would you like to do?\n")
+        navigate_managing(Id)
 
     elif Id == 9:
         exit
@@ -38,3 +38,4 @@ def open_reservation(Id):
 def navigate_managing(choice):
     if choice in managing_actions:
         managing_actions[choice]()
+        print(menus[choice])
