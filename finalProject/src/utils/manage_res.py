@@ -37,5 +37,5 @@ def open_reservation(Id):
 # the following function calls the function corresponding to the choice made
 def navigate_managing(choice):
     if choice in managing_actions:
-        managing_actions[choice]()
+        managing_actions[choice](choice)
         print(menus[choice])
