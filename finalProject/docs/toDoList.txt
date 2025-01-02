@@ -1,0 +1,3 @@
+- change the main reservation function to limit the value input to 5 (if ... in...)
+- add the "Move seat function" and the "remove seat function"
+- add the choice to check the reservation made

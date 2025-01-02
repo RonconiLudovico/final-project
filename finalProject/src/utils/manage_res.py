@@ -4,7 +4,6 @@ from utils.assign_var import *
 from utils.add_seat import add_seat
 from utils.move_seat import move_seat
 from utils.remove_seat import remove_seat
-from utils.decision_making import *
 
 
 # Here a dictionary is defined in which different functions are called depending on what the user prompted
@@ -35,7 +34,11 @@ def open_reservation(Id):
         manage()
 
 # the following function calls the function corresponding to the choice made
-def navigate_managing(choice):
+def navigate_managing(Id):
+    print(menus["3"])
+    choice = input("Please choose an action: ")
     if choice in managing_actions:
-        managing_actions[choice](choice)
-        print(menus[choice])
+        managing_actions[choice](Id)
+    else:
+        print("invalid choice please try again.\n")
+        navigate_managing(Id)

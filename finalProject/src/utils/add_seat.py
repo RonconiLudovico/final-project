@@ -8,5 +8,5 @@ from utils.assign_var import *
 #                  The program will load the main "reservation function" (navigate funct in decision_making.py)
 def add_seat(Id):
     seatsToAdd = int(input("How many seats would you like to add? \n"))
-    reservationDict[Id][1] -= seatsToAdd
+    reservationDict[Id][1] = seatsToAdd + int(reservationDict[Id][1])
     print(f"You added {seatsToAdd} seats successfully!\n")

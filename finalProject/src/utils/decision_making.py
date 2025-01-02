@@ -4,14 +4,7 @@
 from utils.view_infos import show_infos
 from utils.reserve_seat import choose_movie
 from utils.manage_res import manage
-
-menus = {
-    "0" : "Make Reservation [1] ---- Check Availability [2] ---- Manage Reservation [3] ---- Exit [9]\n",
-    "1" : "\nGo Back [0]\n",
-    "2" : "\nGo Back [0]\n",
-    "3" : "Add a seat [1] ---- Move a seat [2] ---- Remove a seat [3] ---- Go Back [0]\n",
-    "9" : "Thank you for using our Cinema booking Manager :)"
-    }
+from utils.assign_var import menus
 
 actions = {
     "1" : choose_movie,

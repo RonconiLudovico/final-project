@@ -1,6 +1,6 @@
 # The following program creates a reservation
 # It starts by importing all the needed variables and the randint module from random
-
+from time import sleep
 from utils.assign_var import *
 from random import randint
 
@@ -22,6 +22,10 @@ def choose_movie():
 
     movieChoice = int(input("\nFor which projection would you like to book some seats? [Enter Id]\n"))
 
+    if movieChoice > 5:
+        print("PLEASE INPUT A VALID MOVIE ID! \n\n")
+        sleep(0.5)
+        choose_movie()
     print(select_seats(movieChoice))
 
 # The following function starts by asking how many seats would the user like to book, then it updates the number of available seats subtracting the n of seats booked
