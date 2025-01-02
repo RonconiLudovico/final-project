@@ -1,3 +1,12 @@
 - change the main reservation function to limit the value input to 5 (if ... in...)
+
 - add the "Move seat function" and the "remove seat function"
+
 - add the choice to check the reservation made
+
+- In the manage_res menu, add Exit [9] and Go Back [0]
+
+-  if a wrong amount is first input as seats reserved, the second correct input will recieve an output of
+     correct reservation and one for the wrong reservation, reservation correct in the db, the function loops with the wrong input too
+
+- 

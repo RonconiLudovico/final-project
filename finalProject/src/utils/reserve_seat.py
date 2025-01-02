@@ -24,7 +24,7 @@ def choose_movie():
 
     if movieChoice > 5:
         print("PLEASE INPUT A VALID MOVIE ID! \n\n")
-        sleep(0.5)
+        sleep(2)
         choose_movie()
     print(select_seats(movieChoice))
 
@@ -33,10 +33,17 @@ def choose_movie():
 # represent the reservation id
 # finally it prints out the reservation details
 def select_seats(movieId):
-    seatsToBeBooked = input("\nHow many seats would you like to book? ")
+    seatsToBeBooked = int(input("\nHow many seats would you like to book? "))
 
-    movieSchedule[movieId - 1][seats] -= int(seatsToBeBooked)
+    if seatsToBeBooked < movieSchedule[movieId][seats]:
 
-    reservationDict[randint(00000, 99999)] =[movieId, seatsToBeBooked]
+        movieSchedule[movieId - 1][seats] -= int(seatsToBeBooked)
 
-    return f"\nReservation number: {list(reservationDict)[-1]}\n\nyou have booked {seatsToBeBooked} seats for the movie {movieSchedule[movieId - 1][title]}\n"
+        reservationDict[randint(00000, 99999)] = [movieId, seatsToBeBooked]
+        return f"\nReservation number: {list(reservationDict)[-1]}\n\nyou have booked {seatsToBeBooked} seats for the movie {movieSchedule[movieId - 1][title]}\n"
+    
+    else:
+        print("There are not enough seats for the chosen show! \n\n")
+        sleep(2)
+        choose_movie()
+
