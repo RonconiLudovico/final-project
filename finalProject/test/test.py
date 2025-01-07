@@ -1,11 +1,12 @@
 import unittest
 from unittest.mock import patch
+import sys
+import os
 
-from src.utils.add_seat import ask_how_many_seats
-from src.utils.add_seat import update_reservation
-
-def add_one(param):
-    return param + 1
+# This adds the utils directory to the python path
+sys.path.append(os.path.join(os.path.dirname(__file__), '../src'))
+from utils.add_seat import ask_how_many_seats, update_reservation
+ 
 
 
 class Test01(unittest.TestCase):
@@ -14,7 +15,7 @@ class Test01(unittest.TestCase):
         This is the test for the add seat function
         '''
     @patch('builtins.input', return_value = 3)
-    def test_ask_how_many(self):
+    def test_ask_how_many(self, input):
         self.assertEqual(3, ask_how_many_seats())
 
 
@@ -23,4 +24,8 @@ class Test02(unittest.TestCase):
         reservation_dict = {"a" : [1, 3], "b" : [2, 5], "c" : [3, 7]}
         update_reservation(reservation_dict, "b", 3)
         self.assertEqual(reservation_dict, {"a" : [1, 3], "b" : [2, 8], "c" : [3, 7]})
+
         
+
+if __name__ == '__main__':
+    unittest.main()

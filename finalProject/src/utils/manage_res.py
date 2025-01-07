@@ -16,7 +16,6 @@ managing_actions = {
 # The program starts here by prompting the user for a reservation number, calling then the reservation
 def manage():
     reservationId = int(input("\n\nPlease insert your reservation number:\n\n"))
-
     open_reservation(reservationId)
 
 # Then the reservation is opened and the details are shown, the user can choose what to do with the reservation,
@@ -37,8 +36,10 @@ def open_reservation(Id):
 def navigate_managing(Id):
     print(menus["3"])
     choice = input("Please choose an action: ")
+
     if choice in managing_actions:
         managing_actions[choice](Id)
+        
     else:
         print("invalid choice please try again.\n")
         navigate_managing(Id)
