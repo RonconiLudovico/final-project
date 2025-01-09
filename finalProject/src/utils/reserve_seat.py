@@ -22,11 +22,12 @@ def choose_movie():
 
     movieChoice = int(input("\nFor which projection would you like to book some seats? [Enter Id]\n"))
 
-    if movieChoice > 5:
+    if movieChoice <= 0 or movieChoice > len(movieList):
         print("PLEASE INPUT A VALID MOVIE ID! \n\n")
         sleep(2)
         choose_movie()
-    print(select_seats(movieChoice))
+    else:
+        print(select_seats(movieChoice))
 
 # The following function starts by asking how many seats would the user like to book, then it updates the number of available seats subtracting the n of seats booked
 # then it passes in the empty dict reservationDict a new element with the reservation infos as value under the form of a tuple, passing a random integer as the key which will
@@ -35,15 +36,19 @@ def choose_movie():
 def select_seats(movieId):
     seatsToBeBooked = int(input("\nHow many seats would you like to book? "))
 
-    if seatsToBeBooked < movieSchedule[movieId][seats]:
-
-        movieSchedule[movieId - 1][seats] -= int(seatsToBeBooked)
-
-        reservationDict[randint(00000, 99999)] = [movieId, seatsToBeBooked]
-        return f"\nReservation number: {list(reservationDict)[-1]}\n\nyou have booked {seatsToBeBooked} seats for the movie {movieSchedule[movieId - 1][title]}\n"
-    
-    else:
-        print("There are not enough seats for the chosen show! \n\n")
+    if seatsToBeBooked == 0:
+        print("You have to book at least 1 seat! \n\n")
         sleep(2)
         choose_movie()
 
+    elif seatsToBeBooked > movieSchedule[movieId - 1][seats]:
+
+        print("There are not enough seats for the chosen show! \n\n")
+        sleep(2)
+        choose_movie()
+    
+    else:
+        movieSchedule[movieId - 1][seats] -= int(seatsToBeBooked)
+
+        reservationDict[randint(00000, 99999)] = [movieId - 1, seatsToBeBooked]
+        return f"\nReservation number: {list(reservationDict)[-1]}\n\nyou have booked {seatsToBeBooked} seats for the movie {movieSchedule[movieId - 1][title]}\n"

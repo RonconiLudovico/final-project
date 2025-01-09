@@ -36,6 +36,6 @@ menus = {
     "0" : "Make Reservation [1] ---- Check Availability [2] ---- Manage Reservation [3] ---- Exit [9]\n",
     "1" : "\nGo Back [0] ---- Exit [9]\n",
     "2" : "\nGo Back [0] ---- Exit [9]\n",
-    "3" : "Add a seat [1] ---- Move a seat [2] ---- Remove a seat [3] ---- Go Back [0] ---- Exit [9]\n",
+    "3" : "Add a seat [1] ---- Remove a seat [2] ---- Delete Reservation [3] ---- Go Back [0] ---- Exit [9]\n",
     "9" : "Thank you for using our Cinema booking Manager :)"
     }

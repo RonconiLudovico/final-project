@@ -3,14 +3,13 @@
 from utils.assign_var import *
 from utils.add_seat import add_seat
 from utils.move_seat import move_seat
-from utils.remove_seat import remove_seat
-
+from utils.del_res import delete_res
 
 # Here a dictionary is defined in which different functions are called depending on what the user prompted
 managing_actions = {
     "1" : add_seat,
     "2" : move_seat,
-    "3" : remove_seat
+    "3" : delete_res
 }
 
 # The program starts here by prompting the user for a reservation number, calling then the reservation
