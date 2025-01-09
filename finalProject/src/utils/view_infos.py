@@ -1,6 +1,6 @@
 # Here I created a function which will return the infos for all the screenings as a Table
 
-from utils.assign_var import *
+from utils.assign_var import movieList, menus, title, time, theater, seats
 
 def show_infos():
     header = "{:<30} {:<30} {:30} {:<30}".format(title, time, theater, seats)

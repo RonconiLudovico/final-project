@@ -1,7 +1,7 @@
 # The following program creates a reservation
 # It starts by importing all the needed variables and the randint module from random
 from time import sleep
-from utils.assign_var import *
+from utils.assign_var import movieList, movieSchedule, reservationDict, Id, title, time, seats, menus
 from random import randint
 
 # The following fucntion displays the screenings schedule

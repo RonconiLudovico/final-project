@@ -1,3 +1,5 @@
+# Here I implemented a program which deletes a reservation and updates the reservation dictionary and the movie schedule
+
 from utils.assign_var import reservationDict, movieSchedule, seats
 from utils.go_back import go_back
 

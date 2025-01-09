@@ -1,9 +1,8 @@
-# Here the function to add one or more seats will be implemented
+# Here I implemented a program which adds seats to a reservation and updates both the reservation dictionary and the movie schedule
 
 from utils.assign_var import movieSchedule, reservationDict, seats, movieList
 from utils.go_back import go_back
 
-# In the following function I tried to write a function that prompts the user for how many seats to add and updates them
 
 def add_seat(Id):
     seatsToAdd = ask_how_many_seats(Id)

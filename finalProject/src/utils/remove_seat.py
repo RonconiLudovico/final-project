@@ -1,3 +1,6 @@
+# In the following program I implemented  a function which works like the add_seat function but in
+# reverse, removing seats and updating the reservation dictionary and the movie schedule
+
 from utils.assign_var import reservationDict, movieSchedule, seats
 from utils.go_back import go_back
 
