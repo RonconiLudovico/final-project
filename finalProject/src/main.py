@@ -10,6 +10,7 @@ def check_exit(choice):
     if choice == "9":
         print(menus["9"])
         sys.exit()
+            
 
 # Here I defined a function that prompts the user for a choice
 def get_choice():

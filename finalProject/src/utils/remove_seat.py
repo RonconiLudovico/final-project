@@ -2,5 +2,5 @@
 
 from utils.manage_res import *
 
-def move_seat():
+def remove_seat():
     print("we moved your seat")

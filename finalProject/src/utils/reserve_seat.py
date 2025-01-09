@@ -27,7 +27,7 @@ def choose_movie():
         sleep(2)
         choose_movie()
     else:
-        print(select_seats(movieChoice))
+        select_seats(movieChoice)
 
 # The following function starts by asking how many seats would the user like to book, then it updates the number of available seats subtracting the n of seats booked
 # then it passes in the empty dict reservationDict a new element with the reservation infos as value under the form of a tuple, passing a random integer as the key which will
@@ -51,4 +51,4 @@ def select_seats(movieId):
         movieSchedule[movieId - 1][seats] -= int(seatsToBeBooked)
 
         reservationDict[randint(00000, 99999)] = [movieId - 1, seatsToBeBooked]
-        return f"\nReservation number: {list(reservationDict)[-1]}\n\nyou have booked {seatsToBeBooked} seats for the movie {movieSchedule[movieId - 1][title]}\n"
+        print(f"\nReservation number: {list(reservationDict)[-1]}\n\nyou have booked {seatsToBeBooked} seats for the movie {movieSchedule[movieId - 1][title]}\n\n", menus["1"])
