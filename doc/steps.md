@@ -9,7 +9,9 @@
 
 - [x] First we need to build a JSON file in which to store all the necessary variables and dict to store our datas (literal object and dict to store)
 
-- [ ] Then we need to create utils files for each function we want to implement in the project (no func implementation yet)
+- [x] Create a function which will convert Json files into usable python objects
+
+- [x] Then we need to create utils files for each function we want to implement in the project (no func implementation yet)
 
 - [ ] Write basic structures for utils and main implementing each one with 'pass'
 
