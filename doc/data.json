@@ -1,0 +1,17 @@
+{
+  "items" : [
+  {"name":"Broom", "location":"Storage room", "category":"Cleaning"},
+  {"name":"Batteries", "location":"Entrance", "category":"Utilities"},
+  {"name":"Mop", "location":"Storage room", "category":"Cleaning"},
+  {"name":"Microwave", "location":"Kitchen", "category":"Cooking"}
+  ]
+, 
+  "house_locations" : {
+    "Storage room": ["Broom", "Mop"],
+    "Entrance": ["Batteries"],
+    "Kitchen": ["Microwave"],
+    "Living room": ["Air Conditioner"], 
+    "Bathroom": [], 
+    "Bedroom": []
+  }
+}
