@@ -5,3 +5,4 @@ with open('doc/data.json', 'r') as f:
 
 objects = data['items']
 locations = data['house_locations']
+menu = data['menu']

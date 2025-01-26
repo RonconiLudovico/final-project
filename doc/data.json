@@ -4,8 +4,7 @@
   {"name":"Batteries", "location":"Entrance", "category":"Utilities"},
   {"name":"Mop", "location":"Storage room", "category":"Cleaning"},
   {"name":"Microwave", "location":"Kitchen", "category":"Cooking"}
-  ]
-, 
+  ], 
   "house_locations" : {
     "Storage room": ["Broom", "Mop"],
     "Entrance": ["Batteries"],
@@ -13,5 +12,12 @@
     "Living room": ["Air Conditioner"], 
     "Bathroom": [], 
     "Bedroom": []
+  },
+  "menu" : {
+    "main" : "1. See Objects ---- 2. Add Object ---- 3. Remove Object ---- 4. Edit Object ---- 0. Exit",
+    "add" : "Please provide the object infos requested./n9. Back ---- 0. Exit",
+    "remove" : "Which object would you like to remove?/n9. Back ---- 0. Exit",
+    "edit" : "Which object would you like to edit?/n9. Back ---- 0. Exit"
   }
 }
+
