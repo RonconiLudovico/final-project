@@ -13,7 +13,7 @@
 
 - [x] Then we need to create utils files for each function we want to implement in the project (no func implementation yet)
 
-- [ ] Write basic structures for utils and main implementing each one with 'pass'
+- [x] Write basic structures for utils and main implementing each one with 'pass'
 
 - [ ] Start implementing tests for each function, ending with main
 
