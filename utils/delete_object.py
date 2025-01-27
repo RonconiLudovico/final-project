@@ -4,12 +4,14 @@ def del_object(obj):
     '''
     This function deletes the provided object from the registry
     '''
-    if obj in objects:
-        objects.remove(obj)
+    
+    if obj[0] in locations[obj[1]] and obj[1] in locations.keys():
+        locations[obj[1]].remove(obj[0])
+
+    if obj[0] in objects.keys():
+        del objects[obj[0]]
     else:
-        print("Object not found in the registry")
         return
     
-    locations[obj['location']].remove(obj['name'])
-    print("Object deleted successfully")
+    print(f"Object deleted successfully\n{objects}\n{locations}")
     return

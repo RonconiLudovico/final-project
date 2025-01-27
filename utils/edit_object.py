@@ -20,24 +20,24 @@ def edit_name(obj):
     '''
     This function edits the name of an object in the registry
     '''
-    locations[obj['location']].remove(obj['name'])
-    obj['name'] = input("What is the new object's name? ")
-    objects.append(obj)
-    locations[obj['location']].append(obj['name'])
+    locations[obj[1]].remove(obj[0])
+    obj[0] = input("What is the new object's name? ")
+    objects[obj[0]] = obj[1:]
+    locations[obj[1]].append(obj[0])
 
 
 def edit_location(obj):
     '''
     This function edits the location of the specified object
     '''
-    locations[obj['location']].remove(obj['name'])
-    obj['location'] = input("What is the new object's location? ")
-    objects.append(obj)
-    locations[obj['location']].append(obj['name'])
+    obj[1] = input("What is the new object's location? ")
+    objects[obj[0]] = obj[1:]
+    locations[obj[1]].append(obj[0])
+
 
 def edit_category(obj):
     '''
     This function edits the category of the specified object
     '''
-    obj['category'] = input("What is the new object's category? ")
-    objects.append(obj)
+    obj[2] = input("What is the new object's category? ")
+    objects[obj[0]] = obj[1:]

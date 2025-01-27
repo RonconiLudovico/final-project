@@ -8,7 +8,7 @@ class Test01(unittest.TestCase):
         '''
         Here we'll test the del_object function for the location registry
         '''
-        data = {"name":"Microwave", "location":"Kitchen", "category":"Cooking"}
+        data = ["Microwave", "Kitchen", "Cooking"]
         del_object(data)
         self.assertEqual(len(locations['Kitchen']), 0)
 
@@ -18,6 +18,6 @@ class Test02(unittest.TestCase):
         '''
         Here we'll test the del_object function for the item registry
         '''
-        data = {"name":"Microwave", "location":"Kitchen", "category":"Cooking"}
+        data = ["Microwave", "Kitchen", "Cooking"]
         del_object(data)
         self.assertEqual(len(objects), 3)

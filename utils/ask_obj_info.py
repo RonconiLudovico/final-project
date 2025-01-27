@@ -7,4 +7,4 @@ def ask_object_info():
     object_name = input("What is the object's name? ")
     object_location = input("Where is the object located? ")
     object_category = input("What is the object's category? ")
-    return {'name': object_name, 'location': object_location, 'category': object_category}
+    return [object_name, object_location, object_category]

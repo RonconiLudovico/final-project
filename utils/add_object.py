@@ -4,7 +4,7 @@ def add_object(obj):
     '''
     This function adds an object to a destination dictionary
     '''
-    locations[obj['location']].append(obj['name'])
-    objects.append(obj)
-    print(f"obj{'name'} has been added to the registry!\n")
+    locations[obj[1]].append(obj[0])
+    objects[obj[0]] = list([obj[1], obj[2]])
+    print(f"obj{'name'} has been added to the registry!\n{objects}")
     return
