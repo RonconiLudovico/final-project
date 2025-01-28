@@ -31,4 +31,4 @@
 
 - [x] add final prompt to 'edit' function
 
-- [ ] add menus for each choice
+- [x] add menus for each choice
