@@ -15,6 +15,8 @@ def edit_object(obj):
     else:
         edit_category(obj)
 
+    print("The object has been successfully edited!\n")
+
 
 def edit_name(obj):
     '''

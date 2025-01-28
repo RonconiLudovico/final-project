@@ -13,5 +13,5 @@ def del_object(obj):
     else:
         return
     
-    print(f"Object deleted successfully\n{objects}\n{locations}")
+    print(f"\nObject deleted successfully\n")
     return

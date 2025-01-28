@@ -6,5 +6,5 @@ def add_object(obj):
     '''
     locations[obj[1]].append(obj[0])
     objects[obj[0]] = list([obj[1], obj[2]])
-    print(f"obj{'name'} has been added to the registry!\n{objects}")
+    print(f"\n{obj[0]} has been added to the registry!\n")
     return

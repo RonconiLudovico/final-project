@@ -15,9 +15,20 @@
 
 - [x] Write basic structures for utils and main implementing each one with 'pass'
 
-- [ ] Start implementing tests for each function, ending with main
+- [x] Start implementing tests for each function, ending with main
 
-- [ ] Implement the utils functions
+- [x] Implement the utils functions
 
-- [ ] Implement main function with multiple choice menu
+- [x] Implement main function with multiple choice menu
 
+- [x] Remove 'print' statement in 'add_object'
+
+- [x] Remove 'print' statement from 'del_object'
+
+- [x] check bug in 'edit object' function due to deletion process
+
+- [x] fix objname in 'add_obj' final prompt
+
+- [x] add final prompt to 'edit' function
+
+- [ ] add menus for each choice

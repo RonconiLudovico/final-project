@@ -15,9 +15,9 @@
   },
   "menu" : {
     "main" : "1. See Objects ---- 2. Add Object ---- 3. Remove Object ---- 4. Edit Object ---- 0. Exit",
-    "add" : "Please provide the object infos requested./n9. Back ---- 0. Exit",
-    "remove" : "Which object would you like to remove?/n9. Back ---- 0. Exit",
-    "edit" : "Which object would you like to edit?/n9. Back ---- 0. Exit"
+    "add" : "Please provide the object infos requested.",
+    "remove" : "Which object would you like to remove?",
+    "edit" : "Fill in the following informations:"
   }
 }
 
